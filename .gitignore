@@ -1,0 +1,8 @@
+node_modules
+.docz/
+.storybook/cache/
+other/public/
+build/
+coverage/
+dist/
+yarn-error.log

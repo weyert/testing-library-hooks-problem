@@ -1,0 +1,103 @@
+{
+  "name": "experiment",
+  "version": "0.0.0-semantically-released",
+  "main": "dist/index.js",
+  "module": "dist/experiment.esm.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "format": "kcd-scripts format",
+    "test": "kcd-scripts test",
+    "validate": "kcd-scripts validate",
+    "setup": "yarn install && yarn run validate",
+    "publish:package": "CI=true npx -p semantic-release@15 -c 'echo running semantic-release && semantic-release'",
+    "build": "echo 'build called'",
+    "prepublish": "yarn run build",
+    "publish": "echo 'publish called'"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.0",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4"
+  },
+  "devDependencies": {
+    "@babel/helpers": "^7.8.0",
+    "@babel/parser": "^7.8.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.0",
+    "@babel/plugin-proposal-decorators": "^7.8.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.8.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.0",
+    "@babel/preset-react": "^7.8.0",
+    "@babel/preset-typescript": "^7.8.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@testing-library/user-event": "^8.0.3",
+    "@types/babel-plugin-macros": "^2.8.0",
+    "@types/jest": "^24.0.25",
+    "@types/lodash": "^4.14.149",
+    "@types/lolex": "^5.1.0",
+    "@types/match-sorter": "^4.0.0",
+    "@types/vfile-message": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "@wessberg/rollup-plugin-ts": "^1.2.6",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-no-side-effect-class-properties": "^0.0.7",
+    "cross-env": "^6.0.3",
+    "eslint-plugin-cypress": "^2.8.1",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-testing-library": "^1.3.4",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "gray-matter": "^4.0.2",
+    "handlebars": "^4.7.1",
+    "http-server": "^0.12.1",
+    "husky": "^4.0.7",
+    "jest-emotion": "^10.0.27",
+    "jest-expect-message": "^1.0.2",
+    "jest-fetch-mock": "^3.0.1",
+    "jest-jenkins-reporter": "^1.0.2",
+    "jest-junit": "^10.0.0",
+    "jest-runner-stylelint": "^2.2.3",
+    "kcd-scripts": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "require-context.macro": "^1.2.2",
+    "rimraf": "^3.0.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "semantic-release": "^16.0.1",
+    "ts-jest": "^24.3.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "yaml": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.12.0",
+    "react-dom": ">=16.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "kcd-scripts pre-commit"
+    }
+  },
+  "resolutions": {
+    "react-docgen": "5.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "ie >= 11"
+  ]
+}
